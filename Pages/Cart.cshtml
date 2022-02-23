@@ -1,0 +1,40 @@
+﻿@page
+@model Mission7.Pages.CartModel
+@{
+}
+
+<h2>Your cart</h2>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Subtotal</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach(var l in Model.cart.Items)
+            {
+                <tr>
+                    <td>@l.Book.Title</td>
+                    <td>@l.Quantity</td>
+                    <td>$@l.Book.Price</td>
+                    <td>$@(l.Quantity * l.Book.Price)</td>
+                </tr>
+            }
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <td colspan="3">Total:</td>
+            <td>@Model.cart.CalculateTotal().ToString("c")</td>
+        </tr>
+    </tfoot>
+</table>
+
+<div>
+    <a class="btn btn-primary" href="@Model.ReturnUrl">Continue Shopping</a>
+</div>
