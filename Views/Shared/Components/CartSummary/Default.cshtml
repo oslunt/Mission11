@@ -12,6 +12,14 @@
                 @Model.CalculateTotal().ToString("c")
             </small>
         }
+    else
+        {
+            <small class="navbar-text">
+                <b>Your cart:</b>
+                0 item(s)
+                $0.00
+            </small>
+        }
     <a class="btn btn-sm btn-secondary navbar-btn" asp-page="/Cart" asp-route-returnUrl="@ViewContext.HttpContext.Request.PathAndQuery()">
         <i class="fa fa-shopping-cart"></i>
     </a>
