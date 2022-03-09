@@ -11,14 +11,14 @@
         </h4>
     </div>
 
-    <ul>
-        <li>Author: @Model.Author</li>
-        <li>Publisher: @Model.Publisher</li>
-        <li>ISBN: @Model.Isbn</li>
-        <li>Classification: @Model.Classification</li>
-        <li>Category: @Model.Category</li>
-        <li>PageCount: @Model.PageCount</li>
-        <li>Price: @Model.Price</li>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">Author: @Model.Author</li>
+        <li class="list-group-item">Publisher: @Model.Publisher</li>
+        <li class="list-group-item">ISBN: @Model.Isbn</li>
+        <li class="list-group-item">Classification: @Model.Classification</li>
+        <li class="list-group-item">Category: @Model.Category</li>
+        <li class="list-group-item">PageCount: @Model.PageCount</li>
+        <li class="list-group-item">Price: @Model.Price</li>
     </ul>
 
     <form method="post" asp-page="/Cart">
