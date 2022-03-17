@@ -1,6 +1,9 @@
 ﻿@page "/admin"
 @model Mission7.Pages.Admin.IndexModel
 
+@using Microsoft.AspNetCore.Authorization
+@attribute [Authorize]
+
 @{
 }
 
@@ -14,7 +17,7 @@
 </head>
 
 <body>
-    <component type="typeof(Mission7.Pages.Admin.Routed)" render-mode="ServerPrerendered" />
+    <component type="typeof(Mission7.Pages.Admin.Routed)" render-mode="Server" />
     <script src="/_framework/blazor.server.js"></script>
 </body>
 </html>
